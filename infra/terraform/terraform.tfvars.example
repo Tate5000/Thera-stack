@@ -1,0 +1,6 @@
+aws_region      = "us-east-1"
+project_name    = "therastack"
+database_url    = "postgres://username:password@host:port/database"
+hosted_zone_id  = "Z1234567890ABC"
+backend_domain  = "api.therastack.com"
+frontend_domain = "app.therastack.com"

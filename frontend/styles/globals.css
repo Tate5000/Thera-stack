@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 240, 240, 245;
+  --card-background: 255, 255, 255;
+  --card-foreground: 15, 23, 42;
+  --secondary-foreground: 100, 116, 139;
+  --border-color: 226, 232, 240;
+  --input-background: 255, 255, 255;
+  --input-foreground: 15, 23, 42;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 18, 24, 38;
+  --card-background: 30, 41, 59;
+  --card-foreground: 241, 245, 249;
+  --secondary-foreground: 148, 163, 184;
+  --border-color: 51, 65, 85;
+  --input-background: 30, 41, 59;
+  --input-foreground: 241, 245, 249;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Dark mode utility classes */
+@layer utilities {
+  .text-primary-dark {
+    @apply text-gray-100 dark:text-gray-100;
+  }
+  
+  .text-secondary-dark {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+  
+  .text-muted-dark {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+  
+  .bg-card-dark {
+    @apply bg-white dark:bg-gray-800;
+  }
+  
+  .border-dark {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+  
+  .hover-dark {
+    @apply hover:bg-gray-100 dark:hover:bg-gray-700;
+  }
+}

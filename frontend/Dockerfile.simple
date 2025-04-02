@@ -1,0 +1,17 @@
+
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Create a minimal test frontend
+RUN echo "<\!DOCTYPE html><html><head><title>TheraStack Frontend</title></head><body><h1>TheraStack Frontend</h1><p>Backend is running at <a href=\"http://localhost:8000\">http://localhost:8000</a></p></body></html>" > index.html
+
+# Install a simple HTTP server
+RUN npm install -g serve
+
+# Expose port
+EXPOSE 3000
+
+# Command to run the server
+CMD ["serve", "-s", ".", "-p", "3000"]
+

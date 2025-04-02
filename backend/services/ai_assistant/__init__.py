@@ -1,0 +1,1 @@
+# AI Assistant service module - provides AI chat and support functionality
